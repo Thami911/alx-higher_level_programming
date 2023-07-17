@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # test_square.py
+# Brennan D Baraban <375@holbertonschool.com>
 """Defines unittests for models/square.py.
 
 Unittest classes:
@@ -89,67 +90,67 @@ class TestSquare_size(unittest.TestCase):
     """Unittests for testing size initialization of the Square class."""
 
     def test_None_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(None)
 
     def test_str_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square("invalid")
 
     def test_float_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(5.5)
 
     def test_complex_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(complex(5))
 
     def test_dict_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square({"a": 1, "b": 2}, 2)
 
     def test_bool_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(True, 2, 3)
 
     def test_list_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square([1, 2, 3])
 
     def test_set_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square({1, 2, 3}, 2)
 
     def test_tuple_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square((1, 2, 3), 2, 3)
 
     def test_frozenset_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(frozenset({1, 2, 3, 1}))
 
     def test_range_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(range(5))
 
     def test_bytes_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(b'Python')
 
     def test_bytearray_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(bytearray(b'abcdefg'))
 
     def test_memoryview_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(memoryview(b'abcdefg'))
 
     def test_inf_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(float('inf'))
 
     def test_nan_size(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(float('nan'))
 
     # Test size values
@@ -166,71 +167,71 @@ class TestSquare_x(unittest.TestCase):
     """Unittests for testing initialization of Square x attribute."""
 
     def test_None_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, None)
 
     def test_str_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, "invalid")
 
     def test_float_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, 5.5)
 
     def test_complex_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, complex(5))
 
     def test_dict_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, {"a": 1, "b": 2}, 2)
 
     def test_bool_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, True)
 
     def test_list_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, [1, 2, 3])
 
     def test_set_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, {1, 2, 3})
 
     def test_tuple_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, (1, 2, 3))
 
     def test_frozenset_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, frozenset({1, 2, 3, 1}))
 
     def test_range_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, range(5))
 
     def test_bytes_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, b'Python')
 
     def test_bytearray_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, bytearray(b'abcdefg'))
 
     def test_memoryview_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, memoryview(b'abcedfg'))
 
     def test_inf_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, float('inf'), 2)
 
     def test_nan_x(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, float('nan'), 2)
 
     def test_negative_x(self):
-        with self.assertRaisesRegex(ValueError, "x Ensure that the value provided is greater than or equal to zero."):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Square(5, -1, 0)
 
 
@@ -238,67 +239,67 @@ class TestSquare_y(unittest.TestCase):
     """Unittests for testing initialization of Square y attribute."""
 
     def test_None_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, None)
 
     def test_str_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 1, "invalid")
 
     def test_float_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, 5.5)
 
     def test_complex_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, complex(5))
 
     def test_dict_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 1, {"a": 1, "b": 2})
 
     def test_list_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 1, [1, 2, 3])
 
     def test_set_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 1, {1, 2, 3})
 
     def test_tuple_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 1, (1, 2, 3))
 
     def test_frozenset_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, frozenset({1, 2, 3, 1}))
 
     def test_range_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, range(5))
 
     def test_bytes_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, b'Python')
 
     def test_bytearray_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, bytearray(b'abcdefg'))
 
     def test_memoryview_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, memoryview(b'abcedfg'))
 
     def test_inf_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 1, float('inf'))
 
     def test_nan_y(self):
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 1, float('nan'))
 
     def test_negative_y(self):
-        with self.assertRaisesRegex(ValueError, "y Ensure that the value provided is greater than or equal to zero."):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Square(3, 0, -1)
 
 
@@ -306,15 +307,15 @@ class TestSquare_order_of_initialization(unittest.TestCase):
     """Unittests for testing order of Square attribute initialization."""
 
     def test_size_before_x(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square("invalid size", "invalid x")
 
     def test_size_before_y(self):
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square("invalid size", 1, "invalid y")
 
     def test_x_before_y(self):
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, "invalid x", "invalid y")
 
 
@@ -485,7 +486,7 @@ class TestSquare_update_args(unittest.TestCase):
 
     def test_update_args_invalid_size_type(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s.update(89, "invalid")
 
     def test_update_args_size_zero(self):
@@ -500,37 +501,37 @@ class TestSquare_update_args(unittest.TestCase):
 
     def test_update_args_invalid_x(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s.update(89, 1, "invalid")
 
     def test_update_args_x_negative(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(ValueError, "x Ensure that the value provided is greater than or equal to zero."):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             s.update(98, 1, -4)
 
     def test_update_args_invalid_y(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             s.update(89, 1, 2, "invalid")
 
     def test_update_args_y_negative(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(ValueError, "y Ensure that the value provided is greater than or equal to zero."):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s.update(98, 1, 2, -4)
 
     def test_update_args_size_before_x(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s.update(89, "invalid", "invalid")
 
     def test_update_args_size_before_y(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s.update(89, "invalid", 2, "invalid")
 
     def test_update_args_x_before_y(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s.update(89, 1, "invalid", "invalid")
 
 
@@ -587,7 +588,7 @@ class TestSquare_update_kwargs(unittest.TestCase):
 
     def test_update_kwargs_invalid_size(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(TypeError, "width Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s.update(size="invalid")
 
     def test_update_kwargs_size_zero(self):
@@ -602,22 +603,22 @@ class TestSquare_update_kwargs(unittest.TestCase):
 
     def test_update_kwargs_invalid_x(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(TypeError, "x Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s.update(x="invalid")
 
     def test_update_kwargs_x_negative(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(ValueError, "x Ensure that the value provided is greater than or equal to zero."):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             s.update(x=-5)
 
     def test_update_kwargs_invalid_y(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(TypeError, "y Ensure that the value provided is an integer."):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             s.update(y="invalid")
 
     def test_update_kwargs_y_negative(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaisesRegex(ValueError, "y Ensure that the value provided is greater than or equal to zero."):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s.update(y=-5)
 
     def test_update_args_and_kwargs(self):
