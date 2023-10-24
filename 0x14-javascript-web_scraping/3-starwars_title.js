@@ -2,7 +2,7 @@
 
 const the_request = require("request");
 const epsNumber = process.argv[2];
-const apiURL = "https://swapi-api.hbtn.io/api/films/:id";
+const apiURL = "https://swapi-api.hbtn.io/api/films/";
 
 the_request(apiURL + epsNumber, function (err, response, body) {
   if (err) {
