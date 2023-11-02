@@ -13,21 +13,21 @@ Usage
 ::
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name("Kwenziwa", "Khanyile")
-    My name is Kwenziwa Khanyile
+    >>> say_my_name("Thamsanqa", "Mncwabe")
+    My name is Thamsanqa Mncwabe
 
 ::
 
-    >>> say_my_name("Kwenziwa", "Khanyile")
-    My name is Kwenziwa Khanyile
+    >>> say_my_name("Thamsanqa", "Mncwabe")
+    My name is Thamsanqa Mncwabe
 
 The parameter ```l_name``` is optional. If no last name is provided,
 an empty string is printed instead.
 
 ::
 
-    >>> say_my_name("Kwenziwa")
-    My name is Kwenziwa 
+    >>> say_my_name("Thamsanqa")
+    My name is Thamsanqa 
 
 Invalid Names
 =============
@@ -37,7 +37,7 @@ a TypeError is raised.
 
 ::
 
-    >>> say_my_name(6, "Zakes")
+    >>> say_my_name(6, "Mthamis")
     Traceback (most recent call last):
     TypeError: f_name must be a string
 
@@ -49,7 +49,7 @@ a TypeError is raised.
 
 ::
 
-    >>> say_my_name({"Lee": 6, "Zakes": 23}, 7.7)
+    >>> say_my_name({"Lee": 6, "Mthamis": 23}, 7.7)
     Traceback (most recent call last):
     TypeError: f_name must be a string
 
